@@ -1,0 +1,200 @@
+"use client";
+
+import {
+  ActionIcon,
+  Anchor,
+  AspectRatio,
+  Box,
+  Center,
+  Container,
+  Divider,
+  Group,
+  SimpleGrid,
+  Stack,
+  Text,
+  Title,
+} from "@mantine/core";
+import { IconBrandInstagram, IconPhone } from "@tabler/icons-react";
+import Image from "next/image";
+import { scrollToSection, SectionId, sections } from "@/config/sections";
+
+export function Footer() {
+  const colors = {
+    titles: "#83EDA3",
+    footerBg: "#021630",
+    copyrightBg: "#005bb5",
+    text: "#FFFFFF",
+    links: "#FFFFFF",
+    divider: "#005bb5",
+  };
+
+  const handleLinkClick = (
+    event: React.MouseEvent<HTMLAnchorElement>,
+    sectionId: SectionId
+  ) => {
+    event.preventDefault();
+    scrollToSection(sectionId)
+  };
+
+  const siteMapItems = sections.map((section) => (
+    <Anchor
+      key={section.label}
+      href={"#" + section.id}
+      c={colors.links}
+      onClick={(event) => handleLinkClick(event, section.id)}
+    >
+      {section.label}
+    </Anchor>
+  ));
+
+  return (
+    <Box component="footer" bg={colors.footerBg} c={colors.text}>
+      <Container size="sm" py="xs">
+        <Group
+          justify="center"
+          align="center"
+          gap="xs"
+          style={(theme) => ({
+            [`@media (maxWidth: ${theme.breakpoints.md})`]: {
+              flexDirection: "column",
+              gap: theme.spacing.xl,
+            },
+          })}
+        >
+          <Box
+            my="sm"
+            w={{ base: "70%", md: 300 }}
+            h={60}
+            style={{ position: "relative" }}
+          >
+            <Image
+              src="/images/logoExpotech.svg"
+              alt="Logo Expotech"
+              fill
+              priority
+              style={{
+                objectFit: "contain",
+                objectPosition: "center",
+              }}
+              sizes="70vw"
+            />
+          </Box>
+          <Stack
+            align="center"
+            gap="xs"
+            style={(theme) => ({
+              textAlign: "center",
+              [`@media (minWidth: ${theme.breakpoints.md})`]: {
+                alignItems: "flex-end",
+                textAlign: "left",
+              },
+            })}
+          >
+            <Text ta="center" fz="sm">
+              Av. Centenário, 116 - sala 34 - Vila Christino, Maringá.
+            </Text>
+          </Stack>
+        </Group>
+
+        <Center>
+          <Divider
+            my="xs"
+            color={colors.divider}
+            w={{ base: "80%", md: "100%" }}
+          />
+        </Center>
+
+        <SimpleGrid
+          cols={{ base: 1, md: 3 }}
+          spacing={{ base: "xl", md: "lg" }}
+          verticalSpacing="xs"
+        >
+          <Stack
+            gap={1}
+            align="center"
+            style={(theme) => ({
+              textAlign: "center",
+              [`@media (minWidth: ${theme.breakpoints.md})`]: {
+                alignItems: "flex-start",
+                justifyContent: "center",
+                height: "100%",
+                textAlign: "left",
+              },
+            })}
+          >
+            <Title order={4} c={colors.titles}>
+              Fale Conosco:
+            </Title>
+            <Group gap={1}>
+              <ActionIcon variant="transparent" c={colors.links}>
+                <IconPhone size={20} />
+              </ActionIcon>
+              <Anchor href="tel:+554430266080" c={colors.links}>
+                (44) 3026-6080
+              </Anchor>
+            </Group>
+            <Group gap={1}>
+              <ActionIcon variant="transparent" c={colors.links}>
+                <IconBrandInstagram size={20} />
+              </ActionIcon>
+              <Anchor
+                href="https://www.instagram.com/maringatech/"
+                target="_blank"
+                rel="noopener noreferrer"
+                c={colors.links}
+              >
+                @maringatech
+              </Anchor>
+            </Group>
+          </Stack>
+
+          <Divider color={colors.divider} hiddenFrom="md" w="60%" mx="auto" />
+
+          <Stack
+            gap={1}
+            align="center"
+            style={(theme) => ({
+              textAlign: "center",
+              [`@media (minWidth: ${theme.breakpoints.md})`]: {
+                justifyContent: "center",
+                height: "100%",
+              },
+            })}
+          >
+            <Title order={4} c={colors.titles}>
+              Horário de funcionamento:
+            </Title>
+            <Text>Segunda à sexta-feira</Text>
+            <Text>8h às 11h30 e 13h às 18h</Text>
+          </Stack>
+
+          <Divider color={colors.divider} hiddenFrom="md" w="40%" mx="auto" />
+
+          <Stack
+            gap={1}
+            align="center"
+            style={(theme) => ({
+              textAlign: "center",
+              [`@media (minWidth: ${theme.breakpoints.md})`]: {
+                alignItems: "flex-start",
+                textAlign: "left",
+              },
+            })}
+          >
+            {siteMapItems}
+          </Stack>
+        </SimpleGrid>
+      </Container>
+
+      <Box bg={colors.copyrightBg} c={colors.text} py="sm">
+        <Container size="lg">
+          <Stack align="center" gap={5}>
+            <Text size="sm" ta="center">
+              Copyrights © 2025. Todos os direitos reservados Maringá Tech.
+            </Text>
+          </Stack>
+        </Container>
+      </Box>
+    </Box>
+  );
+}
