@@ -2,13 +2,7 @@
 
 import { CtaButton } from "@/components/CtaButton";
 import { Section } from "@/components/Section";
-import {
-  Box,
-  Stack,
-  Text,
-  Title,
-  rem
-} from "@mantine/core";
+import { Box, Stack, Text, Title, rem } from "@mantine/core";
 
 export default function Hero() {
   return (
@@ -22,7 +16,7 @@ export default function Hero() {
           textAlign: "center",
           color: "white",
         }}
-        mih={{ base: "100vh", md: "768px" }}
+        mih={{ base: "70vh", md: "768px" }}
         mah={{ base: "auto", md: "1000px" }}
       >
         <Stack align="center" style={{ zIndex: 1 }} p="sm" gap="xs">
@@ -61,57 +55,6 @@ export default function Hero() {
           <CtaButton>Faça sua inscrição</CtaButton>
         </Stack>
       </Box>
-
-      <Stack align="center" style={{ zIndex: 1 }} p="sm" gap="xs">
-        <Title
-            order={1}
-            px={{ base: "xl", sm: "0" }}
-            fz={{ base: rem(42), sm: rem(56) }}
-            fw={700}
-            lts={-1}
-            lh={1}
-            mb="sm"
-            maw={{ base: "100%", sm: "70%" }}
-            c="#6DB2E3"
-          >
-            Sobre o evento
-          </Title>
-        <Text
-          px={{ base: "md", sm: "0" }}
-          fz={{ base: rem(24), sm: rem(28) }}
-          lh={1.1}
-          mb="xl"
-          maw={{ base: "80%", sm: "60%" }}
-        >
-          A **EXPOTECH Maringá 2025** é o maior encontro de ciência, tecnologia
-          e inovação da região, promovendo a integração entre universidades,
-          setor produtivo e sociedade.
-        </Text>
-        <Text
-          px={{ base: "md", sm: "0" }}
-          fz={{ base: rem(24), sm: rem(28) }}
-          lh={1.1}
-          mb="xl"
-          maw={{ base: "80%", sm: "60%" }}
-        >
-          Inspirada na histórica FEITECH 2013, que impulsionou a cultura de
-          inovação em Maringá, a EXPOTECH chega com uma proposta moderna e
-          interativa, alinhada à Transformação Digital e ao desenvolvimento
-          sustentável do Paraná.
-        </Text>
-        <Text
-          px={{ base: "md", sm: "0" }}
-          fz={{ base: rem(24), sm: rem(28) }}
-          lh={1.1}
-          mb="xl"
-          maw={{ base: "80%", sm: "60%" }}
-        >
-          Durante cinco dias, o Maringatech se transforma em um hub aberto de
-          conhecimento, negócios e conexões estratégicas, aproximando
-          pesquisadores, empresas, investidores e a comunidade.{" "}
-        </Text>
-        <CtaButton>Faça sua inscrição</CtaButton>
-      </Stack>
     </Section>
   );
 }

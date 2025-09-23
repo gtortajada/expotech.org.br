@@ -59,7 +59,7 @@ export function Navbar() {
     top: rem(56),
     left: 0,
     right: 0,
-    backgroundColor: "#808285",
+    backgroundColor: "#181818",
     borderTop: `${rem(1)} solid rgba(255, 255, 255, 0.2)`,
   };
 

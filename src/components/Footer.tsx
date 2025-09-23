@@ -91,7 +91,7 @@ export function Footer() {
             })}
           >
             <Text ta="center" fz="sm">
-              Av. Centenário, 116 - sala 34 - Vila Christino, Maringá.
+              Av. Centenário, 116 - Vila Christino, Maringá, Paraná.
             </Text>
           </Stack>
         </Group>
@@ -143,24 +143,6 @@ export function Footer() {
             <Group gap={1}>
               <ActionIcon variant="transparent" c={colors.links}>
                 <Image
-                  src={LinkedinIcon}
-                  alt="Ícone do Linkedin"
-                  width={20}
-                  height={20}
-                />
-              </ActionIcon>
-              <Anchor
-                href="https://www.linkedin.com/company/incubadora-tecnol-gica-de-maring-/posts/?feedView=all"
-                target="_blank"
-                rel="noopener noreferrer"
-                c={colors.links}
-              >
-                Parque Tecnológico de Maringatech
-              </Anchor>
-            </Group>
-            <Group gap={1}>
-              <ActionIcon variant="transparent" c={colors.links}>
-                <Image
                   src={GlobalIcon}
                   alt="Ícone do Site"
                   width={20}
@@ -174,6 +156,24 @@ export function Footer() {
                 c={colors.links}
               >
                 maringatech.org.br
+              </Anchor>
+            </Group>
+            <Group gap={1}>
+              <ActionIcon variant="transparent" c={colors.links}>
+                <Image
+                  src={LinkedinIcon}
+                  alt="Ícone do Linkedin"
+                  width={20}
+                  height={20}
+                />
+              </ActionIcon>
+              <Anchor
+                href="https://www.linkedin.com/company/incubadora-tecnol-gica-de-maring-/posts/?feedView=all"
+                target="_blank"
+                rel="noopener noreferrer"
+                c={colors.links}
+              >
+                Parque Tecnológico Maringatech
               </Anchor>
             </Group>
           </Stack>
