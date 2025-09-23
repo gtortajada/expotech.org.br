@@ -14,27 +14,16 @@ export default function Hero() {
   return (
     <Section id="home">
       <Box
-        style={(theme) => ({
+        style={{
           position: "relative",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
           textAlign: "center",
           color: "white",
-          backgroundImage:
-            "linear-gradient(rgba(2, 22, 48, 0.45), rgba(2, 22, 48, 0.45)), url(/images/home/bg-header.webp)",
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-          backgroundAttachment: "fixed",
-          backgroundPosition: "center 100%",
-
-          [`@media (minWidth: ${theme.breakpoints.md})`]: {
-            backgroundPosition: "center bottom",
-          },
-        })}
+        }}
         mih={{ base: "100vh", md: "768px" }}
         mah={{ base: "auto", md: "1000px" }}
-        pb={{ base: 0, md: rem(150) }}
       >
         <Stack align="center" style={{ zIndex: 1 }} p="sm" gap="xs">
           <Title
@@ -46,6 +35,7 @@ export default function Hero() {
             lh={1}
             mb="sm"
             maw={{ base: "100%", sm: "70%" }}
+            c="#6DB2E3"
           >
             Inovação, ciência e tecnologia conectando academia, empresas e
             sociedade
@@ -73,6 +63,19 @@ export default function Hero() {
       </Box>
 
       <Stack align="center" style={{ zIndex: 1 }} p="sm" gap="xs">
+        <Title
+            order={1}
+            px={{ base: "xl", sm: "0" }}
+            fz={{ base: rem(42), sm: rem(56) }}
+            fw={700}
+            lts={-1}
+            lh={1}
+            mb="sm"
+            maw={{ base: "100%", sm: "70%" }}
+            c="#6DB2E3"
+          >
+            Sobre o evento
+          </Title>
         <Text
           px={{ base: "md", sm: "0" }}
           fz={{ base: rem(24), sm: rem(28) }}

@@ -1,9 +1,12 @@
 "use client";
 
+import GlobalIcon from "@/assets/globalAzul.svg";
+import InstagramIcon from "@/assets/instagramAzul.svg";
+import LinkedinIcon from "@/assets/linkedinAzul.svg";
+import { scrollToSection, SectionId, sections } from "@/config/sections";
 import {
   ActionIcon,
   Anchor,
-  AspectRatio,
   Box,
   Center,
   Container,
@@ -12,20 +15,17 @@ import {
   SimpleGrid,
   Stack,
   Text,
-  Title,
 } from "@mantine/core";
-import { IconBrandInstagram, IconPhone } from "@tabler/icons-react";
 import Image from "next/image";
-import { scrollToSection, SectionId, sections } from "@/config/sections";
 
 export function Footer() {
   const colors = {
-    titles: "#83EDA3",
-    footerBg: "#021630",
-    copyrightBg: "#005bb5",
+    titles: "#6DB2E3",
+    footerBg: "#181818",
+    copyrightBg: "#808285",
     text: "#FFFFFF",
     links: "#FFFFFF",
-    divider: "#005bb5",
+    divider: "#808285",
   };
 
   const handleLinkClick = (
@@ -33,7 +33,7 @@ export function Footer() {
     sectionId: SectionId
   ) => {
     event.preventDefault();
-    scrollToSection(sectionId)
+    scrollToSection(sectionId);
   };
 
   const siteMapItems = sections.map((section) => (
@@ -105,7 +105,7 @@ export function Footer() {
         </Center>
 
         <SimpleGrid
-          cols={{ base: 1, md: 3 }}
+          cols={{ base: 1, md: 2 }}
           spacing={{ base: "xl", md: "lg" }}
           verticalSpacing="xs"
         >
@@ -122,20 +122,14 @@ export function Footer() {
               },
             })}
           >
-            <Title order={4} c={colors.titles}>
-              Fale Conosco:
-            </Title>
             <Group gap={1}>
               <ActionIcon variant="transparent" c={colors.links}>
-                <IconPhone size={20} />
-              </ActionIcon>
-              <Anchor href="tel:+554430266080" c={colors.links}>
-                (44) 3026-6080
-              </Anchor>
-            </Group>
-            <Group gap={1}>
-              <ActionIcon variant="transparent" c={colors.links}>
-                <IconBrandInstagram size={20} />
+                <Image
+                  src={InstagramIcon}
+                  alt="Ícone do Instagram"
+                  width={20}
+                  height={20}
+                />
               </ActionIcon>
               <Anchor
                 href="https://www.instagram.com/maringatech/"
@@ -146,26 +140,42 @@ export function Footer() {
                 @maringatech
               </Anchor>
             </Group>
-          </Stack>
-
-          <Divider color={colors.divider} hiddenFrom="md" w="60%" mx="auto" />
-
-          <Stack
-            gap={1}
-            align="center"
-            style={(theme) => ({
-              textAlign: "center",
-              [`@media (minWidth: ${theme.breakpoints.md})`]: {
-                justifyContent: "center",
-                height: "100%",
-              },
-            })}
-          >
-            <Title order={4} c={colors.titles}>
-              Horário de funcionamento:
-            </Title>
-            <Text>Segunda à sexta-feira</Text>
-            <Text>8h às 11h30 e 13h às 18h</Text>
+            <Group gap={1}>
+              <ActionIcon variant="transparent" c={colors.links}>
+                <Image
+                  src={LinkedinIcon}
+                  alt="Ícone do Linkedin"
+                  width={20}
+                  height={20}
+                />
+              </ActionIcon>
+              <Anchor
+                href="https://www.linkedin.com/company/incubadora-tecnol-gica-de-maring-/posts/?feedView=all"
+                target="_blank"
+                rel="noopener noreferrer"
+                c={colors.links}
+              >
+                Parque Tecnológico de Maringatech
+              </Anchor>
+            </Group>
+            <Group gap={1}>
+              <ActionIcon variant="transparent" c={colors.links}>
+                <Image
+                  src={GlobalIcon}
+                  alt="Ícone do Site"
+                  width={20}
+                  height={20}
+                />
+              </ActionIcon>
+              <Anchor
+                href="https://maringatech.org.br/"
+                target="_blank"
+                rel="noopener noreferrer"
+                c={colors.links}
+              >
+                maringatech.org.br
+              </Anchor>
+            </Group>
           </Stack>
 
           <Divider color={colors.divider} hiddenFrom="md" w="40%" mx="auto" />

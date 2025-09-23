@@ -1,41 +1,36 @@
 "use client";
 
 import "@mantine/carousel/styles.css";
-
-import { Carousel } from "@mantine/carousel";
-import {
-  Box,
-  Card,
-  Container,
-  Divider,
-  Group,
-  Image,
-  SimpleGrid,
-  Stack,
-  Text,
-  Title,
-} from "@mantine/core";
-import { useMediaQuery } from "@mantine/hooks";
-import Autoplay from "embla-carousel-autoplay";
-import React, { useRef } from "react";
+import { Box, Stack, Text, Title } from "@mantine/core";
 
 import { CtaButton } from "@/components/CtaButton";
 import { Section } from "../Section";
 
-export default function ServicesSection() {
+export default function Informacoes() {
   return (
-    <Section id="services" bg="#ffffff">
-      <Container size="lg">
+    <Section id="informacoes">
+      <Box
+        style={{
+          position: "relative",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          textAlign: "center",
+          color: "white",
+        }}
+        mih={{ base: "100vh", md: "768px" }}
+        mah={{ base: "auto", md: "1000px" }}
+      >
         <Stack gap="xs" align="center">
           <Title
             order={1}
             size="h1"
             ta="center"
+            c="#6DB2E3"
             style={{
               fontWeight: 700,
               fontSize: "clamp(1.75rem, 4vw, 2.5rem)",
               lineHeight: 1.2,
-              color: "#0161DF",
             }}
           >
             Quem pode participar?
@@ -46,7 +41,7 @@ export default function ServicesSection() {
             maw={330}
             style={{
               lineHeight: 1.2,
-              color: "black",
+              color: "white",
             }}
           >
             * Estudantes de ensino médio e superior * Pesquisadores e
@@ -58,11 +53,11 @@ export default function ServicesSection() {
             order={1}
             size="h1"
             ta="center"
+            c="#6DB2E3"
             style={{
               fontWeight: 700,
               fontSize: "clamp(1.75rem, 4vw, 2.5rem)",
               lineHeight: 1.2,
-              color: "#0161DF",
             }}
           >
             O que esperamos?
@@ -73,7 +68,7 @@ export default function ServicesSection() {
             maw={330}
             style={{
               lineHeight: 1.2,
-              color: "black",
+              color: "white",
             }}
           >
             ✔️ Participantes engajados ✔️ Novas conexões entre universidade e
@@ -84,7 +79,7 @@ export default function ServicesSection() {
             <CtaButton>Quero fazer minha inscrição</CtaButton>
           </Box>
         </Stack>
-      </Container>
+      </Box>
     </Section>
   );
 }

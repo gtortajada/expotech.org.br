@@ -21,7 +21,7 @@ export function Navbar() {
   const { activeSection } = useActiveSection();
 
   const headerStyles: CSSProperties = {
-    backgroundColor: "#0161DF",
+    backgroundColor: "#181818",
     position: "fixed",
     top: 0,
     left: 0,
@@ -59,7 +59,7 @@ export function Navbar() {
     top: rem(56),
     left: 0,
     right: 0,
-    backgroundColor: "#0161DF",
+    backgroundColor: "#808285",
     borderTop: `${rem(1)} solid rgba(255, 255, 255, 0.2)`,
   };
 

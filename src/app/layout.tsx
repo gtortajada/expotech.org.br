@@ -9,10 +9,11 @@ import { ColorSchemeScript, MantineProvider } from "@mantine/core";
 import { ActiveSectionProvider } from "@/components/ActiveSectionContext";
 import { SectionObserver } from "@/components/SectionObserver";
 import { sections } from "@/config/sections";
+import { Background } from '@/components/Background';
 
 export const metadata = {
   title: "Expotech",
-  description: "Inovação, ciência e tecnologia conectando academia, empresas e sociedade",
+  description: "Inovação, ciência e tecnologia conectando academia, empresas e sociedade.",
 };
 
 export default function RootLayout({
@@ -27,12 +28,14 @@ export default function RootLayout({
       </head>
       <body>
         <MantineProvider theme={theme}>
-          <ActiveSectionProvider>
-            <Navbar />
-            <SectionObserver sectionIds={sections.map((s) => s.id)} />
-            {children}
-            <Footer />
-          </ActiveSectionProvider>
+            <Background>
+              <ActiveSectionProvider>
+                <Navbar />
+                <SectionObserver sectionIds={sections.map((s) => s.id)} />
+                {children}
+                <Footer />
+              </ActiveSectionProvider>
+            </Background>
         </MantineProvider>
       </body>
     </html>
