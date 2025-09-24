@@ -2,57 +2,90 @@
 
 import { CtaButton } from "@/components/CtaButton";
 import { Section } from "@/components/Section";
-import { Box, Stack, Text, Title, rem } from "@mantine/core";
+import { Box, Stack, Text, Title, rem, Grid, Group, Image } from "@mantine/core";
 
 export default function Hero() {
   return (
     <Section id="home">
       <Box
         style={{
-          position: "relative",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
           textAlign: "center",
-          color: "white",
         }}
-        mih={{ base: "70vh", md: "768px" }}
-        mah={{ base: "auto", md: "1000px" }}
+        mih={{ base: "90vh", md: "100vh" }}
       >
-        <Stack align="center" style={{ zIndex: 1 }} p="sm" gap="xs">
+        <Stack align="center" p="sm" gap="xl">
+          <Box w={{ base: 288, md: 600 }} mb="md" mx="auto" pt="md">
+            <Image
+              src="/images/logoExpotech.svg"
+              alt="Logo Expotech"
+            />
+          </Box>
+
           <Title
-            order={1}
-            px={{ base: "xl", sm: "0" }}
-            fz={{ base: rem(42), sm: rem(56) }}
+            order={2}
+            fz={{ base: rem(24), md: rem(46) }}
             fw={700}
-            lts={-1}
-            lh={1}
-            mb="sm"
-            maw={{ base: "100%", sm: "70%" }}
+            maw={{ base: "90%", md: "60%" }}
             c="#6DB2E3"
           >
-            Inovação, ciência e tecnologia conectando academia, empresas e
-            sociedade
+            Onde a ciência, tecnologia e inovação se encontram.
           </Title>
-          <Text
-            px={{ base: "md", sm: "0" }}
-            fz={{ base: rem(24), sm: rem(28) }}
-            lh={1.1}
-            mb="xl"
-            maw={{ base: "80%", sm: "60%" }}
-          >
-            Maringatech – Maringá/PR
-          </Text>
-          <Text
-            px={{ base: "md", sm: "0" }}
-            fz={{ base: rem(24), sm: rem(28) }}
-            lh={1.1}
-            mb="xl"
-            maw={{ base: "80%", sm: "60%" }}
-          >
-            29 de setembro a 03 de outubro de 2025
-          </Text>
-          <CtaButton>Faça sua inscrição</CtaButton>
+
+          <Stack gap="xs">
+            <Text fz={{ base: rem(18), md: rem(22) }}>
+              <strong>Local:</strong> Maringatech - Maringá/PR
+            </Text>
+            <Text fz={{ base: rem(18), md: rem(22) }}>
+              <strong>Data:</strong> 29 de setembro a 03 de outubro de 2025
+            </Text>
+          </Stack>
+
+          <CtaButton>
+            Faça sua inscrição
+          </CtaButton>
+
+          <Stack align="center" gap="sm">
+            <Text fz={{ base: rem(16), md: rem(18) }} c="dimmed">
+              Realização:
+            </Text>
+
+            <Grid align="center" justify="center" gutter="md" w="100%">
+              <Grid.Col span={{ base: 12, md: 6 }}>
+                <Group justify="center">
+                  <Image
+                    src="/images/logoMaringaTech.svg"
+                    alt="Logo Maringatech"
+                    w={{ base: 238, md: "auto" }}
+                    h="auto"
+                    maw={400}
+                    fit="contain"
+                  />
+                </Group>
+              </Grid.Col>
+
+              <Grid.Col span={{ base: 12, md: 6 }}>
+                <Group justify="center" gap="lg">
+                  <Image
+                    src="/images/logoParana.svg"
+                    alt="Logo Governo do Paraná"
+                    w={{ base: 99, md: 150 }}
+                    h="auto"
+                    fit="contain"
+                  />
+                  <Image
+                    src="/images/logoFundacaoAraucaria.svg"
+                    alt="Logo Fundação Araucária"
+                    w={{ base: 93, md: 140 }}
+                    h="auto"
+                    fit="contain"
+                  />
+                </Group>
+              </Grid.Col>
+            </Grid>
+          </Stack>
         </Stack>
       </Box>
     </Section>

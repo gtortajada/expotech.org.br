@@ -6,7 +6,7 @@ import { Stack, Text, Title, rem } from "@mantine/core";
 export default function Sobre() {
   return (
     <Section id="sobre">
-      <Stack align="center" style={{ zIndex: 1 }} p="sm" gap="xs">
+      <Stack align="center" ta="center" style={{ zIndex: 1 }} p="sm" gap="xs">
         <Title
           order={2}
           px={{ base: "xl", sm: "0" }}
