@@ -32,7 +32,7 @@ export function Background({ children }: BackgroundProps) {
             position: 'absolute',
             top: '10vh',
             left: 0,
-            transform: 'translateX(-40%)',
+            transform: 'translateX(-50%)',
             width: '25vw',
             maxWidth: '300px',
           }}
@@ -47,9 +47,9 @@ export function Background({ children }: BackgroundProps) {
         <Box
           style={{
             position: 'absolute',
-            top: '75vh',
+            top: '65vh',
             right: 0,
-            transform: 'translateX(20%)',
+            transform: 'translateX(45%)',
             width: '25vw',
             maxWidth: '300px',
           }}

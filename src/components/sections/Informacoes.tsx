@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { CtaButton } from "@/components/CtaButton";
 import { Section } from "@/components/Section";
 import {
@@ -11,6 +12,17 @@ import {
   Title,
   rem,
 } from "@mantine/core";
+
+function ListIcon() {
+  return (
+    <Image
+      src="/images/xIcon.svg"
+      alt="Ícone de marcação do item da lista"
+      width={14}
+      height={14}
+    />
+  );
+}
 
 export default function Informacoes() {
   function ProgramacaoCard({
@@ -64,7 +76,8 @@ export default function Informacoes() {
                 fz={{ base: rem(20), sm: rem(20) }}
                 lh={1.4}
                 ta="left"
-                pl= {{base: "0.5rem", md:"3rem"}}
+                pl={{ base: "0.5rem", md: "3rem" }}
+                icon={<ListIcon />}
               >
                 <List.Item>Estudantes de ensino médio e superior</List.Item>
                 <List.Item>Pesquisadores e professores</List.Item>
@@ -84,7 +97,8 @@ export default function Informacoes() {
                 fz={{ base: rem(20), sm: rem(20) }}
                 lh={1.4}
                 ta="left"
-                pl= {{base: "0.5rem", md:"5rem"}}
+                pl={{ base: "0.5rem", md: "5rem" }}
+                icon={<ListIcon />}
               >
                 <List.Item>Participantes engajados</List.Item>
                 <List.Item>

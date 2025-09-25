@@ -22,10 +22,10 @@ function ProgramacaoCard({
 }) {
   return (
     <Stack ta="center" gap="sm">
-      <Text fz={{ base: rem(22), sm: rem(32) }} fw={600} c="white" lh={1.1}>
+      <Text fz={{ base: rem(22), sm: rem(24) }} fw={600} c="white" lh={1.1}>
         {title}
       </Text>
-      <Text c="gray.3" fz={{ base: rem(16), sm: rem(24) }} lh={1.4}>
+      <Text c="gray.3" fz={{ base: rem(16), sm: rem(20) }} lh={1.4}>
         {children}
       </Text>
     </Stack>
@@ -71,14 +71,21 @@ export default function Programacao() {
             <ProgramacaoCard title="01 de outubro">
               Maringatech Aberto – 10h00 às 16h00. O parque tecnológico abre
               suas portas para visitação, com 51 empresas de base tecnológica
-              apresentando seus negócios e soluções. Entrada gratuita.
+              apresentando seus negócios e soluções. <br/>Entrada gratuita.
             </ProgramacaoCard>
 
             <ProgramacaoCard title="Mulheraço na Expotech">
               Talk Show: “Elas Fazem e Acontecem na Tecnologia” – Dia 01/10, das
               17h às 19h. Um bate-papo inspirador no Parque Tecnológico
               MaringaTech sobre inovação, gestão e negócios com quatro mulheres
-              que estão fazendo a diferença com inovação e tecnologia.
+              que estão fazendo a diferença com inovação e tecnologia.<br/>
+              <Anchor
+                href="https://www.sympla.com.br/evento/mulheraco-na-expotech-2025/3138538"
+                target="_blank"
+                inherit
+              >
+                Faça sua inscrição aqui
+              </Anchor>
             </ProgramacaoCard>
 
             <ProgramacaoCard title="Atividades Paralelas">
@@ -91,7 +98,7 @@ export default function Programacao() {
                 eventos@maringatech.org.br
               </Anchor>
               ) e a Inova Week Maringá, com workshops e palestras simultâneas.
-              Mais em{" "}
+              <br/>Mais em{" "}
               <Anchor
                 href="https://biomadeinovacaodemaringa.com.br"
                 target="_blank"
