@@ -57,28 +57,37 @@ export default function Programacao() {
             verticalSpacing={{ base: "xl", md: "3rem" }}
           >
             <ProgramacaoCard title="29 de setembro a 03 de outubro">
-              Abertura oficial - 10h00. Exposição de Patentes da UEM – 10h00 às
-              16h00. Descubra as inovações mais disruptivas desenvolvidas por
-              professores e alunos da Universidade Estadual de Maringá.
+              <strong>Abertura oficial</strong> - 10h00. Exposição de Patentes
+              da UEM – 10h00 às 16h00. <strong>Descubra as inovações</strong>{" "}
+              mais disruptivas desenvolvidas por professores e alunos da
+              Universidade Estadual de Maringá.
             </ProgramacaoCard>
 
             <ProgramacaoCard title="30 de setembro">
-              Momento Integração Universidade-Empresa – 08h00 às 11h00. Encontro
-              que aproxima inventores e empresários, fomentando oportunidades de
-              transferência de tecnologia e parcerias estratégicas.
+              <strong>Momento Integração Universidade - Empresa</strong> – 08h00
+              às 11h00. Encontro que aproxima inventores e empresários,
+              fomentando{" "}
+              <strong>
+                oportunidades de transferência de tecnologia e parcerias
+                estratégicas
+              </strong>
+              .
             </ProgramacaoCard>
 
             <ProgramacaoCard title="01 de outubro">
-              Maringatech Aberto – 10h00 às 16h00. O parque tecnológico abre
-              suas portas para visitação, com 51 empresas de base tecnológica
-              apresentando seus negócios e soluções. <br/>Entrada gratuita.
+              Maringatech Aberto – 10h00 às 16h00.{" "}
+              <strong>O parque tecnológico abre suas portas</strong> para
+              visitação, com 51 empresas de base tecnológica apresentando seus
+              negócios e soluções. <br />
+              <strong>Entrada gratuita.</strong>
             </ProgramacaoCard>
 
             <ProgramacaoCard title="Mulheraço na Expotech">
-              Talk Show: “Elas Fazem e Acontecem na Tecnologia” – Dia 01/10, das
-              17h às 19h. Um bate-papo inspirador no Parque Tecnológico
-              MaringaTech sobre inovação, gestão e negócios com quatro mulheres
-              que estão fazendo a diferença com inovação e tecnologia.<br/>
+              Talk Show: <strong>“Elas Fazem e Acontecem na Tecnologia”</strong>{" "}
+              – Dia 01/10, das 17h às 19h. Um bate-papo inspirador sobre{" "}
+              <strong>inovação, gestão e negócios</strong> com quatro mulheres
+              que estão fazendo a diferença com inovação e tecnologia.
+              <br />
               <Anchor
                 href="https://www.sympla.com.br/evento/mulheraco-na-expotech-2025/3138538"
                 target="_blank"
@@ -89,7 +98,7 @@ export default function Programacao() {
             </ProgramacaoCard>
 
             <ProgramacaoCard title="Atividades Paralelas">
-              Visitas guiadas para alunos (agendamento em{" "}
+              <strong>Visitas guiadas para alunos</strong> (agendamento em{" "}
               <Anchor
                 href="mailto:eventos@maringatech.org.br"
                 target="_blank"
@@ -97,8 +106,9 @@ export default function Programacao() {
               >
                 eventos@maringatech.org.br
               </Anchor>
-              ) e a Inova Week Maringá, com workshops e palestras simultâneas.
-              <br/>Mais em{" "}
+              ) e a <strong>Inova Week Maringá</strong>, com workshops e palestras simultâneas.
+              <br />
+              Mais em{" "}
               <Anchor
                 href="https://biomadeinovacaodemaringa.com.br"
                 target="_blank"
@@ -108,10 +118,10 @@ export default function Programacao() {
               </Anchor>
             </ProgramacaoCard>
             <ProgramacaoCard title="Programação em movimento">
-              No nosso Instagram dividimos bastidores, atualizações em tempo
-              real e detalhes especiais que fazem a diferença. É onde
+              No nosso Instagram <strong>dividimos bastidores, atualizações em tempo
+              real e detalhes especiais</strong> que fazem a diferença. É onde
               construímos uma conexão próxima, compartilhando curiosidades e
-              preparativos únicos. Venha fazer parte dessa conversa!{" "}
+              preparativos únicos. <br/><strong>Venha fazer parte dessa conversa!</strong>{" "}
               <Anchor
                 href="https://www.instagram.com/maringatech/"
                 target="_blank"
