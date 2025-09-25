@@ -37,7 +37,7 @@ export default function Informacoes() {
         <Text fz={{ base: rem(22), sm: rem(32) }} fw={600} c="white" lh={1.1}>
           {title}
         </Text>
-        <Text c="gray.3" fz={{ base: rem(16), sm: rem(24) }} lh={1.4}>
+        <Text component="div" c="gray.3" fz={{ base: rem(16), sm: rem(24) }} lh={1.4}>
           {children}
         </Text>
       </Stack>
