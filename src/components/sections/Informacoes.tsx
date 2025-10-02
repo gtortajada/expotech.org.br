@@ -124,7 +124,7 @@ export default function Informacoes() {
               ta="center"
             ></Title>
           </SimpleGrid>
-          <CtaButton>Quero fazer minha inscrição</CtaButton>
+          <CtaButton bg="#181818" c="#6DB2E3">Quero fazer minha inscrição</CtaButton>
         </Stack>
       </Container>
     </Section>

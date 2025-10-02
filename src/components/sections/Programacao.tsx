@@ -132,7 +132,7 @@ export default function Programacao() {
             </ProgramacaoCard>
           </SimpleGrid>
 
-          <CtaButton>Quero garantir minha vaga</CtaButton>
+          <CtaButton bg="#181818" c="#6DB2E3">Quero garantir minha vaga</CtaButton>
         </Stack>
       </Container>
     </Section>
