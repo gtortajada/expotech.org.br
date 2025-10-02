@@ -10,8 +10,9 @@ import { ActiveSectionProvider } from "@/components/ActiveSectionContext";
 import { SectionObserver } from "@/components/SectionObserver";
 import { sections } from "@/config/sections";
 import { Background } from '@/components/Background';
+import type { Metadata } from "next";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Expotech",
   description: "Inovação, ciência e tecnologia conectando academia, empresas e sociedade.",
 };
