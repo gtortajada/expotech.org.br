@@ -26,6 +26,7 @@ export default function Sobre() {
           lh={1.1}
           mb="xl"
           maw={{ base: "80%", sm: "60%" }}
+          c="white"
         >
           A <strong>EXPOTECH Maringá 2025</strong> é o maior encontro de ciência, tecnologia
           e inovação da região, promovendo a integração entre universidades,
@@ -37,6 +38,7 @@ export default function Sobre() {
           lh={1.1}
           mb="xl"
           maw={{ base: "80%", sm: "60%" }}
+          c="white"
         >
           Inspirada na histórica <strong>FEITECH 2013</strong>, que impulsionou a cultura de
           inovação em Maringá, a EXPOTECH chega com uma proposta moderna e
@@ -49,6 +51,7 @@ export default function Sobre() {
           lh={1.1}
           mb="xl"
           maw={{ base: "80%", sm: "60%" }}
+          c="white"
         >
           Durante cinco dias, o Maringatech se transforma em um <strong>hub aberto de
           conhecimento, negócios e conexões estratégicas</strong>, aproximando

@@ -1,6 +1,6 @@
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #181818;
 }
 
 /* @font-face {
@@ -34,9 +34,8 @@ body {
 }
 
 body {
-  color: var(--background);
-  /* background: var(--background); */
-  font-family: 'Aeonik', Arial, sans-serif;
+  background-color: #181818;
+  font-family: 'Ayar', Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

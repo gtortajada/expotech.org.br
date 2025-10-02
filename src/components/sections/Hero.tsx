@@ -35,10 +35,10 @@ export default function Hero() {
           </Title>
 
           <Stack gap="xs">
-            <Text fz={{ base: rem(18), md: rem(22) }}>
+            <Text c="white" fz={{ base: rem(18), md: rem(22) }}>
               <strong>Local:</strong> Maringatech - Maringá/PR
             </Text>
-            <Text fz={{ base: rem(18), md: rem(22) }}>
+            <Text c="white" fz={{ base: rem(18), md: rem(22) }}>
               <strong>Data:</strong> 29 de setembro a 03 de outubro de 2025
             </Text>
           </Stack>

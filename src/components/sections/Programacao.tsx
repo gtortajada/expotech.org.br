@@ -25,7 +25,7 @@ function ProgramacaoCard({
       <Text fz={{ base: rem(22), sm: rem(24) }} fw={600} c="white" lh={1.1}>
         {title}
       </Text>
-      <Text c="gray.3" fz={{ base: rem(16), sm: rem(20) }} lh={1.4}>
+      <Text c="black" fz={{ base: rem(16), sm: rem(20) }} lh={1.4}>
         {children}
       </Text>
     </Stack>
@@ -45,7 +45,7 @@ export default function Programacao() {
             lts={-1}
             lh={1}
             maw={{ base: "100%", sm: "70%" }}
-            c="#6DB2E3"
+            c="#181818"
             ta="center"
           >
             Programação Principal
@@ -132,7 +132,7 @@ export default function Programacao() {
             </ProgramacaoCard>
           </SimpleGrid>
 
-          <CtaButton bg="#181818" c="#6DB2E3">Quero garantir minha vaga</CtaButton>
+          <CtaButton bg="#181818" c="white">Quero garantir minha vaga</CtaButton>
         </Stack>
       </Container>
     </Section>

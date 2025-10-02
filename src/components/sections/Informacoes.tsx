@@ -56,7 +56,7 @@ export default function Informacoes() {
             lts={-1}
             lh={1}
             maw={{ base: "100%", sm: "70%" }}
-            c="#6DB2E3"
+            c="#181818"
             ta="center"
           >
             Informações
@@ -113,18 +113,8 @@ export default function Informacoes() {
                 </List.Item>
               </List>
             </ProgramacaoCard>
-
-            <Title
-              order={2}
-              fz={{ base: rem(36), sm: rem(48) }}
-              fw={700}
-              lts={-1}
-              lh={1.1}
-              c="#6DB2E3"
-              ta="center"
-            ></Title>
           </SimpleGrid>
-          <CtaButton bg="#181818" c="#6DB2E3">Quero fazer minha inscrição</CtaButton>
+          <CtaButton bg="#181818" c="white">Quero fazer minha inscrição</CtaButton>
         </Stack>
       </Container>
     </Section>
