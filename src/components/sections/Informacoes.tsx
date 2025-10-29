@@ -114,7 +114,7 @@ export default function Informacoes() {
               </List>
             </ProgramacaoCard>
           </SimpleGrid>
-          <CtaButton bg="#181818" c="white">Quero fazer minha inscrição</CtaButton>
+          <CtaButton bg="#181818" c="white">Inscrições encerradas</CtaButton>
         </Stack>
       </Container>
     </Section>

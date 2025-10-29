@@ -1,13 +1,13 @@
 import { Button, MantineColor } from '@mantine/core';
-import type { ReactNode } from 'react';
+import type { ReactNode, ComponentPropsWithoutRef } from 'react';
 
 type CtaButtonProps = {
   children: ReactNode;
   bg?: MantineColor;
   c?: MantineColor;
-};
+} & ComponentPropsWithoutRef<typeof Button>;
 
-export function CtaButton({ children, bg = "#6DB2E3", c = "#021630" }: CtaButtonProps) {
+export function CtaButton({ children, bg = "#6DB2E3", c = "#021630", ...props }: CtaButtonProps) {
   return (
     <Button
       bg={bg}
@@ -16,7 +16,7 @@ export function CtaButton({ children, bg = "#6DB2E3", c = "#021630" }: CtaButton
       size="lg"
       fw={600}
       px="xl"
-      onClick={() => window.open("https://forms.gle/miLcS56cGvkvQU7Z8", "_blank")}
+      {...props}
     >
       {children}
     </Button>

@@ -2,7 +2,10 @@
 
 import { CtaButton } from "@/components/CtaButton";
 import { Section } from "@/components/Section";
-import { Box, Stack, Text, Title, rem, Grid, Group, Image } from "@mantine/core";
+import { Box, Stack, Text, Title, rem, Grid, Group, Image, Anchor } from "@mantine/core";
+
+const PDF_PATH = '/pdf/resumo-evento-2025.pdf';
+const PDF_FILENAME = 'resumo-expotech-2025.pdf';
 
 export default function Hero() {
   return (
@@ -43,9 +46,23 @@ export default function Hero() {
             </Text>
           </Stack>
 
-          <CtaButton>
-            Faça sua inscrição
+          <CtaButton
+          component="a"
+          href={PDF_PATH}
+          target="_blank"
+          rel="noopener noreferrer">
+            Inscrições encerradas
           </CtaButton>
+
+          <Text ta="center">
+          <Anchor
+            href={PDF_PATH}
+            download={PDF_FILENAME}
+            underline="always"
+          >
+            Para fazer o download do resumo do nosso evento, clique aqui.
+          </Anchor>
+        </Text>
 
           <Stack align="center" gap="sm">
             <Text fz={{ base: rem(16), md: rem(18) }} c="dimmed">
