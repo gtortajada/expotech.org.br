@@ -1,24 +1,39 @@
-import { Button, MantineColor } from '@mantine/core';
-import type { ReactNode, ComponentPropsWithoutRef } from 'react';
+import {
+  Button,
+  ButtonProps,
+  createPolymorphicComponent,
+  ElementProps,
+  MantineColor,
+} from "@mantine/core";
+import { forwardRef } from "react";
 
 type CtaButtonProps = {
-  children: ReactNode;
   bg?: MantineColor;
   c?: MantineColor;
-} & ComponentPropsWithoutRef<typeof Button>;
+} & ButtonProps &
+  ElementProps<"button">;
 
-export function CtaButton({ children, bg = "#6DB2E3", c = "#021630", ...props }: CtaButtonProps) {
-  return (
-    <Button
-      bg={bg}
-      c={c}
-      radius="sm"
-      size="lg"
-      fw={600}
-      px="xl"
-      {...props}
-    >
-      {children}
-    </Button>
-  );
-}
+const _CtaButton = forwardRef<HTMLButtonElement, CtaButtonProps>(
+  ({ children, bg = "#6DB2E3", c = "#021630", ...others }, ref) => {
+    return (
+      <Button
+        ref={ref}
+        bg={bg}
+        c={c}
+        radius="sm"
+        size="lg"
+        fw={600}
+        px="xl"
+        {...others}
+      >
+        {children}
+      </Button>
+    );
+  }
+);
+
+_CtaButton.displayName = "CtaButton";
+
+export const CtaButton = createPolymorphicComponent<"button", CtaButtonProps>(
+  _CtaButton
+);

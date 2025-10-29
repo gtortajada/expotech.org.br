@@ -11,7 +11,11 @@ import {
   Text,
   Title,
   rem,
+  Anchor,
 } from "@mantine/core";
+
+const PDF_PATH = "/pdf/resumo-evento-2025.pdf";
+const PDF_FILENAME = "resumo-expotech-2025.pdf";
 
 function ListIcon() {
   return (
@@ -37,7 +41,12 @@ export default function Informacoes() {
         <Text fz={{ base: rem(22), sm: rem(32) }} fw={600} c="white" lh={1.1}>
           {title}
         </Text>
-        <Text component="div" c="gray.3" fz={{ base: rem(16), sm: rem(24) }} lh={1.4}>
+        <Text
+          component="div"
+          c="gray.3"
+          fz={{ base: rem(16), sm: rem(24) }}
+          lh={1.4}
+        >
           {children}
         </Text>
       </Stack>
@@ -114,7 +123,22 @@ export default function Informacoes() {
               </List>
             </ProgramacaoCard>
           </SimpleGrid>
-          <CtaButton bg="#181818" c="white">Inscrições encerradas</CtaButton>
+          <CtaButton
+            bg="#181818"
+            c="white"
+            component="a"
+            href={PDF_PATH}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Ver resumo do evento
+          </CtaButton>
+
+          <Text c="dimmed" size="lg">
+            <Anchor href={PDF_PATH} download={PDF_FILENAME} inherit>
+              Para fazer o download do resumo do nosso evento, clique aqui.
+            </Anchor>
+          </Text>
         </Stack>
       </Container>
     </Section>
