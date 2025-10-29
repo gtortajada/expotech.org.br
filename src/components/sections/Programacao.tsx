@@ -13,6 +13,9 @@ import {
 } from "@mantine/core";
 import React from "react";
 
+const PDF_PATH = "/pdf/resumo-evento-2025.pdf";
+const PDF_FILENAME = "resumo-expotech-2025.pdf";
+
 function ProgramacaoCard({
   title,
   children,
@@ -106,7 +109,8 @@ export default function Programacao() {
               >
                 eventos@maringatech.org.br
               </Anchor>
-              ) e a <strong>Inova Week Maringá</strong>, com workshops e palestras simultâneas.
+              ) e a <strong>Inova Week Maringá</strong>, com workshops e
+              palestras simultâneas.
               <br />
               Mais em{" "}
               <Anchor
@@ -118,10 +122,14 @@ export default function Programacao() {
               </Anchor>
             </ProgramacaoCard>
             <ProgramacaoCard title="Programação em movimento">
-              No nosso Instagram <strong>dividimos bastidores, atualizações em tempo
-              real e detalhes especiais</strong> que fazem a diferença. É onde
-              construímos uma conexão próxima, compartilhando curiosidades e
-              preparativos únicos. <br/><strong>Venha fazer parte dessa conversa!</strong>{" "}
+              No nosso Instagram{" "}
+              <strong>
+                dividimos bastidores, atualizações em tempo real e detalhes
+                especiais
+              </strong>{" "}
+              que fazem a diferença. É onde construímos uma conexão próxima,
+              compartilhando curiosidades e preparativos únicos. <br />
+              <strong>Venha fazer parte dessa conversa!</strong>{" "}
               <Anchor
                 href="https://www.instagram.com/maringatech/"
                 target="_blank"
@@ -132,7 +140,22 @@ export default function Programacao() {
             </ProgramacaoCard>
           </SimpleGrid>
 
-          <CtaButton bg="#181818" c="white">Quero garantir minha vaga</CtaButton>
+          <CtaButton
+            bg="#181818"
+            c="white"
+            component="a"
+            href={PDF_PATH}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Ver resumo do evento
+          </CtaButton>
+
+          <Text c="dimmed" size="lg">
+            <Anchor href={PDF_PATH} download={PDF_FILENAME} inherit>
+              Para fazer o download do resumo do nosso evento, clique aqui.
+            </Anchor>
+          </Text>
         </Stack>
       </Container>
     </Section>
