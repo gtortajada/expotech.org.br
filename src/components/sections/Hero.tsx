@@ -1,6 +1,7 @@
 "use client";
 
-import { CtaButton } from "@/components/CtaButton";
+import { ResumoButton } from "@/components/ResumoButton";
+import { CtaButton } from "../CtaButton";
 import { Section } from "@/components/Section";
 import {
   Anchor,
@@ -53,14 +54,16 @@ export default function Hero() {
             </Text>
           </Stack>
 
-          <CtaButton
+          <CtaButton>Inscrições encerradas</CtaButton>
+
+          <ResumoButton
             component="a"
             href={PDF_PATH}
             target="_blank"
             rel="noopener noreferrer"
           >
             Ver resumo do evento
-          </CtaButton>
+          </ResumoButton>
 
           <Text c="dimmed" size="lg">
             <Anchor href={PDF_PATH} download={PDF_FILENAME} inherit>

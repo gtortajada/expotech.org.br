@@ -1,7 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { CtaButton } from "@/components/CtaButton";
+import { ResumoButton } from "@/components/ResumoButton";
+import { CtaButton } from "../CtaButton";
 import { Section } from "@/components/Section";
 import {
   Container,
@@ -123,7 +124,12 @@ export default function Informacoes() {
               </List>
             </ProgramacaoCard>
           </SimpleGrid>
-          <CtaButton
+
+          <CtaButton bg="#181818" c="white">
+            Inscrições encerradas
+          </CtaButton>
+
+          <ResumoButton
             bg="#181818"
             c="white"
             component="a"
@@ -132,10 +138,10 @@ export default function Informacoes() {
             rel="noopener noreferrer"
           >
             Ver resumo do evento
-          </CtaButton>
+          </ResumoButton>
 
           <Text c="dimmed" size="lg">
-            <Anchor href={PDF_PATH} download={PDF_FILENAME} inherit>
+            <Anchor c="white" href={PDF_PATH} download={PDF_FILENAME} inherit>
               Para fazer o download do resumo do nosso evento, clique aqui.
             </Anchor>
           </Text>

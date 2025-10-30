@@ -3,6 +3,7 @@ export const sections = [
   { id: "sobre", label: "Sobre" },
   { id: "programacao", label: "Programação" },
   { id: "informacoes", label: "Informações" },
+  { id: "resumo", label: "Resumo do evento" },
 ] as const;
 
 export type SectionId = (typeof sections)[number]["id"];
